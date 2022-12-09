@@ -1,10 +1,16 @@
 
 let clr = 'red';
 let clr_input;
-let num_input; 
+let num_input;
+let img;
+function preload() {
+  img = loadImage('img/cover.jpg');
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
+
   //add clr_input to set color
   clr_input = createInput();
   clr_input.position(0, 150);
@@ -25,6 +31,8 @@ function draw() {
   stroke('red');
   line(random(width), random(height), random(width), random(height));
   //on button press
+  image(img, mouseX, mouseY);
+
   button.mousePressed(function(){
     clr = clr_input.value(); //get value from clr_input field
     num = num_input.value(); 
@@ -34,4 +42,3 @@ function draw() {
   });
 
 }
-

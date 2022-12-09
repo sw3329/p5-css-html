@@ -1,3 +1,4 @@
+
 //REFERENCE: https://www.sitepoint.com/get-url-parameters-with-javascript/
 
 //get all paramters + values from URL and write to an object
